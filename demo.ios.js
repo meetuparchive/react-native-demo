@@ -57,16 +57,16 @@ var Groups = React.createClass({
     var self = this;
     return (
       <View style={[foundation.stripe, foundation.bounds]}>
-        <TouchableOpacity onPress={()=>{
+        <React.TouchableOpacity onPress={ () =>{
           this.props.navigator.push({
             component: require('./map.ios'),
-            name: "Hey it's a map!"
+            name: "Here we are"
           });
         }}>
-        <View style={foundation.button}>
-          <Text style={foundation.buttonText}>Where am I?</Text>
-        </View>
-        </TouchableOpacity>
+          <View style={foundation.button}>
+            <Text style={foundation.buttonText}>Where are we????</Text>
+          </View>
+        </React.TouchableOpacity>
       </View>
     );
   }

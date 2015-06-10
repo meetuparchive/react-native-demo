@@ -45,9 +45,10 @@ var GroupsList = React.createClass({
   componentDidMount: function(){
     var self = this;
     var shoppingList = [
-      {"gimme": "groups", "data": {"page": 32, "zip": 90210}}
+      {"gimme": "groups", "data": {"page": 32, "zip": 15205}}
     ];
-    gimme(shoppingList).then(function(data){
+    gimme.apiKey = '715d68731b3913292f447f4c45547'; // change to your api key otherwise we'll all get throttled
+    gimme.get(shoppingList).then(function(data){
       self.setState({
         dataSource: ds.cloneWithRows( data.groups ) // "row-ify" the data
       });
