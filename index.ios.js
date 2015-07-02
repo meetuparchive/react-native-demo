@@ -60,7 +60,7 @@ var RNdemo = React.createClass({
           gestures: Navigator.SceneConfigs.FloatFromRight.gestures
         })}
         initialRoute={{
-          component: require('./groupsList.ios'), // change this to 'groups.ios' or 'demo.ios' to try out those screens
+          component: require('./demo.ios'), // change this to 'groups.ios' or 'demo.ios' to try out those screens
           name: 'Hello'
         }}
       />

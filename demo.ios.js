@@ -17,8 +17,6 @@ var {
   View,
 } = React;
 
-// Include more React components
-var Dummy = require('./dummy.ios');
 
 // Include Meetup stuff
 var gimme = require('gimme');
@@ -26,7 +24,7 @@ var foundation = require('react-native-foundation');
 
 
 // Begin
-var Groups = React.createClass({
+var Demo = React.createClass({
 
   // set up state (changable data) before anything happens 
   getInitialState: function(){
@@ -57,16 +55,24 @@ var Groups = React.createClass({
     var self = this;
     return (
       <View style={[foundation.stripe, foundation.bounds]}>
-        <React.TouchableOpacity onPress={ () =>{
-          this.props.navigator.push({
-            component: require('./map.ios'),
-            name: "Here we are"
-          });
-        }}>
-          <View style={foundation.button}>
-            <Text style={foundation.buttonText}>Where are we????</Text>
-          </View>
-        </React.TouchableOpacity>
+        <View style={foundation.chunk}>
+          <Text style={[foundation.text, foundation.textDisplay]}>
+            Oh yeah
+          </Text>
+          <Text style={foundation.text}>This is totally React Native.</Text>
+        </View>
+        <View style={foundation.chunk}>
+          <TouchableOpacity onPress={ () =>{
+            this.props.navigator.push({
+              component: require('./map.ios'),
+              name: "Here we are"
+            });
+          }}>
+            <View style={foundation.button}>
+              <Text style={foundation.buttonText}>Where are we?</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
       </View>
     );
   }
@@ -85,7 +91,7 @@ var styles = StyleSheet.create({
   */
 });
 
-module.exports = Groups;
+module.exports = Demo;
 
 
 
