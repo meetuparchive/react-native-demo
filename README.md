@@ -27,3 +27,4 @@ If you'd like to start experimenting, open up the react-native-demo directory in
 * [Meetup Foundation for React](https://github.com/meetup/react-native-foundation)
 * [Meetup Buspass prototype](https://github.com/meetup/BusPass)
 * [React.parts](https://react.parts/native-ios)
+* [Gimme](https://github.com/meetup/gimme)
